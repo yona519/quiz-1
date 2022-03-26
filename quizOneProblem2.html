@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quizOneProblem2</title>
+</head>
+<body>
+    <script>
+        const voters = [
+            {name: "John Doe", isRegistered: true},
+            {name: "Nick Fury", isRegistered: false},
+            {name: "Steve Rogers", isRegistered: true},
+            {name: "Tony Stark", isRegistered: false},
+            {name: "Stephen Strange", isRegistered: false}
+        ]
+
+        const nonRegisteredVoters = voters.filter (voter => {
+            return voter.isRegistered == false;
+        })
+        console.log("Non Registered Voters:\n")
+        nonRegisteredVoters.forEach ((voter, x) => {
+            console.log(x+1 + ".) " + voter.name + ".")
+        })
+
+        console.log("\n")
+
+        const registeredVoters = voters.filter (voter => {
+            return voter.isRegistered == true;
+        })
+        console.log("Registered Voters:\n")
+        registeredVoters.forEach ((voter, x) => {
+            console.log(x+1 + ".) " + voter.name + ".")
+        })
+
+    </script>
+</body>
+</html>
